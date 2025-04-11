@@ -71,6 +71,12 @@
 
 ---
 
+## 🛠 사용 기술
+
+- mysql
+
+---
+
 ## 💻 기술 스택
 - **AI/ML**: YOLOv11-CLS, Ultralytics
 - **백엔드**: FastAPI, MySQL
