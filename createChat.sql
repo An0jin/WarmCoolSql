@@ -1,6 +1,8 @@
 CREATE Table chat
-(chat_id int PRIMARY key AUTO_INCREMENT,
-user_id NVARCHAR(255) NOT NULL,
+(chat_id SERIAL PRIMARY key ,
+user_id VARCHAR(255) NOT NULL,
+color_id VARCHAR(255) NOT NULL,
 msg TEXT NOT NULL,
-time DATETIME DEFAULT CURRENT_TIMESTAMP,
-Foreign Key chat(user_id) REFERENCES user(user_id))
+time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+Foreign Key (user_id) REFERENCES "user"(user_id),
+Foreign Key (color_id) REFERENCES color(color_id))

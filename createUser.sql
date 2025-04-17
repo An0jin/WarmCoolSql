@@ -1,7 +1,7 @@
-CREATE Table user(user_id NVARCHAR(255) PRIMARY KEY,
+CREATE Table "user"(user_id VARCHAR(255) PRIMARY KEY,
 pw TEXT NOT NULL ,
 name TEXT NOT NULL, 
 birthday date, 
-gender ENUM('남자','여자') NOT NULL,
-color_name Nvarchar(255),
-Foreign Key user(color_name) REFERENCES color(color_name))
+gender Text Check(gender IN ('남자','여자')) NOT NULL,
+color_name varchar(255),
+Foreign Key (color_name) REFERENCES color(color_id))
