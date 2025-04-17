@@ -103,5 +103,5 @@
 - **AI/ML**: YOLOv11-CLS, Ultralytics
 - **백엔드**: FastAPI, Postgresql
 - **프론트엔드**: Unity, ARFoundation
-- **네트워킹**: Photon PUN2
+- **네트워킹**: Photon Chat
 - **데이터**: Roboflow
