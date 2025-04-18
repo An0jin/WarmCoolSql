@@ -63,7 +63,6 @@
 | ----------- | ------------ | ---------------- | ----------- |
 | color_id    | VARCHAR(255) | 퍼스널 컬러 이름 | PRIMARY KEY |
 | description | TEXT         | 퍼스널 컬러 설명 | -           |
-| img         | TEXT         | 이미지 파일 경로 | NOT NULL    |
 
 ### Chat 테이블 (채팅 정보)
 
@@ -75,13 +74,31 @@
 | msg      | TEXT         | 채팅 내용          | NOT NULL                   |
 | time     | datetime     | 채팅이 올라온 날짜 | DEFAULT CURRENT_TIMESTAMP  |
 
+### Chat 테이블 (채팅 정보)
+
+| 필드명   | 데이터 타입  | 설명               | 제약조건                   |
+| -------- | ------------ | ------------------ | -------------------------- |
+| chat_id  | int          | 채팅 고유 식별자   | PRIMARY KEY,SERIAL |
+| user_id  | VARCHAR(255) | 사용자 고유 식별자 | FOREIGN KEY User.user_id   |
+| color_id | VARCHAR(255) | 퍼스널 컬러 이름   | FOREIGN KEY color.color_id |
+| msg      | TEXT         | 채팅 내용          | NOT NULL                   |
+| time     | datetime     | 채팅이 올라온 날짜 | DEFAULT CURRENT_TIMESTAMP  |
+
+### lipstick 테이블 (채팅 정보)
+
+| 필드명   | 데이터 타입  | 설명               | 제약조건                   |
+| -------- | ------------ | ------------------ | -------------------------- |
+| hex_code  | varchar(7)          | 립스틱 색상상   | PRIMARY KEY |
+| color_id | VARCHAR(255) | 퍼스널 컬러 이름   | FOREIGN KEY color.color_id |
+
 ---
 
 ### 데이터베이스 설계 설명
 
 - **User 테이블**: 사용자의 기본 정보와 퍼스널 컬러 분석 결과를 저장합니다. `color_id` 필드를 통해 Color 테이블과 연결되어 있어, 사용자의 퍼스널 컬러 정보를 참조할 수 있습니다.
-- **Color 테이블**: 시스템에서 사용되는 퍼스널 컬러 타입들의 정보를 저장합니다. 각 퍼스널 컬러에 대한 설명과 대표 이미지 경로를 포함하고 있으며, 봄 웜톤, 여름 쿨톤, 가을 웜톤, 겨울 쿨톤의 4가지 기본 타입을 저장합니다.
+- **Color 테이블**: 시스템에서 사용되는 퍼스널 컬러 타입들의 정보를 저장합니다. 봄 웜톤, 여름 쿨톤, 가을 웜톤, 겨울 쿨톤의 4가지 기본 타입을 저장합니다.
 - **Chat 테이블**: 채팅 내역을 정리합니다 `color_id` 필드를 통해 Color 테이블과 연결되어 있고 `user_id`필드를 통해 User랑 연동이 되어있습니다
+- **lipstick 테이블**: 해당 립스틱 색상에 어울리는 퍼스널 컬러를 저장합니다. `color_id` 필드를 통해 Color 테이블과 연결되어 있어, 사용자의 퍼스널 컬러 정보를 참조할 수 있습니다.
 
 ---
 
