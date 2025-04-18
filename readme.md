@@ -72,13 +72,13 @@
 | user_id  | VARCHAR(255) | 사용자 고유 식별자 | FOREIGN KEY User.user_id   |
 | color_id | VARCHAR(255) | 퍼스널 컬러 이름   | FOREIGN KEY color.color_id |
 | msg      | TEXT         | 채팅 내용          | NOT NULL                   |
-| time     | datetime     | 채팅이 올라온 날짜 | DEFAULT CURRENT_TIMESTAMP  |
+| time     | TIMESTAMP    | 채팅이 올라온 날짜 | DEFAULT CURRENT_TIMESTAMP  |
 
 ### Chat 테이블 (채팅 정보)
 
 | 필드명   | 데이터 타입  | 설명               | 제약조건                   |
 | -------- | ------------ | ------------------ | -------------------------- |
-| chat_id  | int          | 채팅 고유 식별자   | PRIMARY KEY,SERIAL |
+| chat_id  | int          | 채팅 고유 식별자   | PRIMARY KEY,SERIAL         |
 | user_id  | VARCHAR(255) | 사용자 고유 식별자 | FOREIGN KEY User.user_id   |
 | color_id | VARCHAR(255) | 퍼스널 컬러 이름   | FOREIGN KEY color.color_id |
 | msg      | TEXT         | 채팅 내용          | NOT NULL                   |
@@ -86,10 +86,10 @@
 
 ### lipstick 테이블 (채팅 정보)
 
-| 필드명   | 데이터 타입  | 설명               | 제약조건                   |
-| -------- | ------------ | ------------------ | -------------------------- |
-| hex_code  | varchar(7)          | 립스틱 색상상   | PRIMARY KEY |
-| color_id | VARCHAR(255) | 퍼스널 컬러 이름   | FOREIGN KEY color.color_id |
+| 필드명   | 데이터 타입  | 설명             | 제약조건                   |
+| -------- | ------------ | ---------------- | -------------------------- |
+| hex_code | varchar(7)   | 립스틱 색상상    | PRIMARY KEY                |
+| color_id | VARCHAR(255) | 퍼스널 컬러 이름 | FOREIGN KEY color.color_id |
 
 ---
 
@@ -116,6 +116,7 @@
 ---
 
 ## 💻 기술 스택
+
 - **AI/ML**: ![Ultralytics(YOLOv11-CLS)](https://img.shields.io/badge/YOLOv11--CLS(Ultralytics)-111F68?style=flat&logo=Ultralytics&logoColor=white)
 - **백엔드**: ![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
 - **DB** : ![Postgresql](https://img.shields.io/badge/-postgresql-4169E1?style=flat&logo=postgresql&logoColor=white)
