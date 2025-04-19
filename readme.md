@@ -70,19 +70,8 @@
 | -------- | ------------ | ------------------ | -------------------------- |
 | chat_id  | int          | 채팅 고유 식별자   | PRIMARY KEY,AUTO_INCREMENT |
 | user_id  | VARCHAR(255) | 사용자 고유 식별자 | FOREIGN KEY User.user_id   |
-| color_id | VARCHAR(255) | 퍼스널 컬러 이름   | FOREIGN KEY color.color_id |
 | msg      | TEXT         | 채팅 내용          | NOT NULL                   |
 | time     | TIMESTAMP    | 채팅이 올라온 날짜 | DEFAULT CURRENT_TIMESTAMP  |
-
-### Chat 테이블 (채팅 정보)
-
-| 필드명   | 데이터 타입  | 설명               | 제약조건                   |
-| -------- | ------------ | ------------------ | -------------------------- |
-| chat_id  | int          | 채팅 고유 식별자   | PRIMARY KEY,SERIAL         |
-| user_id  | VARCHAR(255) | 사용자 고유 식별자 | FOREIGN KEY User.user_id   |
-| color_id | VARCHAR(255) | 퍼스널 컬러 이름   | FOREIGN KEY color.color_id |
-| msg      | TEXT         | 채팅 내용          | NOT NULL                   |
-| time     | datetime     | 채팅이 올라온 날짜 | DEFAULT CURRENT_TIMESTAMP  |
 
 ### lipstick 테이블 (채팅 정보)
 
