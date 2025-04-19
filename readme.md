@@ -73,7 +73,7 @@
 | msg      | TEXT         | 채팅 내용          | NOT NULL                   |
 | time     | TIMESTAMP    | 채팅이 올라온 날짜 | DEFAULT CURRENT_TIMESTAMP  |
 
-### lipstick 테이블 (채팅 정보)
+### lipstick 테이블 (립스틱 색상 정보)
 
 | 필드명   | 데이터 타입  | 설명             | 제약조건                   |
 | -------- | ------------ | ---------------- | -------------------------- |
