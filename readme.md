@@ -48,14 +48,14 @@
 
 ### User 테이블 (사용자 정보)
 
-| 필드명   | 데이터 타입   | 설명                 | 제약조건                   |
-| -------- | ------------- | -------------------- | -------------------------- |
-| user_id  | NVARCHAR(255) | 사용자 고유 식별자   | PRIMARY KEY                |
-| pw       | TEXT          | 사용자 비밀번호      | NOT NULL                   |
-| name     | TEXT          | 사용자 이름          | NOT NULL                   |
-| birthday | DATE          | 생년월일             | -                          |
-| gender   | TEXT          | 성별                 | 남자, 여자만 입력 가능     |
-| color_id | VARCHAR(255)  | 사용자의 퍼스널 컬러 | FOREIGN KEY Color.color_id |
+| 필드명   | 데이터 타입  | 설명                 | 제약조건                   |
+| -------- | ------------ | -------------------- | -------------------------- |
+| user_id  | VARCHAR(255) | 사용자 고유 식별자   | PRIMARY KEY                |
+| pw       | TEXT         | 사용자 비밀번호      | NOT NULL                   |
+| name     | TEXT         | 사용자 이름          | NOT NULL                   |
+| birthday | DATE         | 생년월일             | -                          |
+| gender   | TEXT         | 성별                 | 남자, 여자만 입력 가능     |
+| color_id | VARCHAR(255) | 사용자의 퍼스널 컬러 | FOREIGN KEY Color.color_id |
 
 ### Color 테이블 (퍼스널 컬러 정보)
 
@@ -66,18 +66,18 @@
 
 ### Chat 테이블 (채팅 정보)
 
-| 필드명   | 데이터 타입  | 설명               | 제약조건                   |
-| -------- | ------------ | ------------------ | -------------------------- |
-| chat_id  | int          | 채팅 고유 식별자   | PRIMARY KEY,AUTO_INCREMENT |
-| user_id  | VARCHAR(255) | 사용자 고유 식별자 | FOREIGN KEY User.user_id   |
-| msg      | TEXT         | 채팅 내용          | NOT NULL                   |
-| time     | TIMESTAMP    | 채팅이 올라온 날짜 | DEFAULT CURRENT_TIMESTAMP  |
+| 필드명  | 데이터 타입  | 설명               | 제약조건                  |
+| ------- | ------------ | ------------------ | ------------------------- |
+| chat_id | int          | 채팅 고유 식별자   | PRIMARY KEY,SERIAL        |
+| user_id | VARCHAR(255) | 사용자 고유 식별자 | FOREIGN KEY User.user_id  |
+| msg     | TEXT         | 채팅 내용          | NOT NULL                  |
+| time    | TIMESTAMP    | 채팅이 올라온 날짜 | DEFAULT CURRENT_TIMESTAMP |
 
 ### lipstick 테이블 (립스틱 색상 정보)
 
 | 필드명   | 데이터 타입  | 설명             | 제약조건                   |
 | -------- | ------------ | ---------------- | -------------------------- |
-| hex_code | varchar(7)   | 립스틱 색상    | PRIMARY KEY                |
+| hex_code | VARCHAR(7)   | 립스틱 색상      | PRIMARY KEY                |
 | color_id | VARCHAR(255) | 퍼스널 컬러 이름 | FOREIGN KEY color.color_id |
 
 ---
