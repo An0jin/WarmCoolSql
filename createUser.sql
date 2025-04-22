@@ -3,5 +3,5 @@ pw TEXT NOT NULL ,
 name TEXT NOT NULL, 
 birthday date, 
 gender Text Check(gender IN ('남자','여자')) NOT NULL,
-color_name varchar(255),
-Foreign Key (color_name) REFERENCES color(color_id))
+hex_code varchar(7),
+Foreign Key (hex_code) REFERENCES lipstick(hex_code))

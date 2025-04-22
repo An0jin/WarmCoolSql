@@ -55,7 +55,7 @@
 | name     | TEXT         | 사용자 이름          | NOT NULL                   |
 | birthday | DATE         | 생년월일             | -                          |
 | gender   | TEXT         | 성별                 | 남자, 여자만 입력 가능     |
-| color_id | VARCHAR(255) | 사용자의 퍼스널 컬러 | FOREIGN KEY Color.color_id |
+| hex_code | VARCHAR(7)   | 립스틱 색상      | FOREIGN KEY lipstick.hex_code               |
 
 ### Color 테이블 (퍼스널 컬러 정보)
 
