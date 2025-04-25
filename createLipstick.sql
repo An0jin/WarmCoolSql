@@ -1,7 +1,7 @@
 CREATE Table lipstick(
     hex_code VARCHAR(7) PRIMARY KEY,
     color_id VARCHAR(255),
-    Foreign Key (color_id) REFERENCES color(color_id);
+    Foreign Key (color_id) REFERENCES color(color_id)
 );
 insert into lipstick(hex_code,color_id) values ('#A45A2B','가을 웜톤');
 insert into lipstick(hex_code,color_id) values ('#9F6D2C','가을 웜톤');
