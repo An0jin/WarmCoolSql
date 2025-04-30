@@ -4,8 +4,8 @@ CREATE table color(
     description TEXT-- 설명
 );
 
-INSERT INTO color(color_id) VALUES
-('봄 웜톤'),
-('여름 쿨톤'),
-('가을 웜톤'),
-('겨울 쿨톤');
+INSERT INTO color(color_id, description) VALUES
+('봄 웜톤', '따뜻하고 생기 있는 밝은 컬러가 어울림'),
+('여름 쿨톤', '부드럽고 은은한 파스텔톤이 어울림'),
+('가을 웜톤', '깊고 풍부한 자연 컬러가 어울림'),
+('겨울 쿨톤', '선명하고 강한 대비의 쿨 컬러가 어울림');
