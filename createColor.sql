@@ -5,5 +5,5 @@ CREATE table color(
 );
 
 INSERT INTO color(color_id, description) VALUES
-('웜톤', '오렌지, 코랄, 피치 계열의 밝고 따뜻한 색상이 어울림'),
-('쿨톤', '핑크, 플럼, 베리 계열의 차분하고 시원한 색상이 어울림')
+('Warm', 'Bright and warm colors such as orange, coral, and peach look good'),
+('Cool', 'Cool and calm colors such as pink, plum, and berry look good')    
