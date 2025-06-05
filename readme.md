@@ -53,8 +53,8 @@
 | user_id  | VARCHAR(255) | 사용자 고유 식별자   | PRIMARY KEY                |
 | pw       | TEXT         | 사용자 비밀번호      | NOT NULL                   |
 | name     | TEXT         | 사용자 이름          | NOT NULL                   |
-| birthday | DATE         | 생년월일             | -                          |
-| gender   | TEXT         | 성별                 | 남자, 여자만 입력 가능     |
+| year     | int         | 태어난 연도             | -                          |
+| gender   | TEXT         | 성별                 | Male, Female만 입력 가능     |
 | hex_code | VARCHAR(7)   | 립스틱 색상      | FOREIGN KEY lipstick.hex_code               |
 
 ### Color 테이블 (퍼스널 컬러 정보)
