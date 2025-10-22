@@ -1,7 +1,6 @@
+-- Active: 1755964622991@@152.67.211.189@5432@postgres
 CREATE table "version"(
-    "platform" TEXT primary key,
-    "version" int Not NULL,
-    "link" TEXT Not NULL
+    "version" int primary key
 );
 
-insert into version (platform, "version", "link") values ('android', 6,'https://play.google.com/store/apps/details?id=com.an0jin.Toneiverse');  
+insert into version (version) values (6);  
