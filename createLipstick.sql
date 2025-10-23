@@ -3,141 +3,149 @@ CREATE Table lipstick(
     color_id TEXT,
     Foreign Key (color_id) REFERENCES color(color_id)
 );
-insert into lipstick(hex_code,color_id) values ('#A45A2B','웜톤');
-insert into lipstick(hex_code,color_id) values ('#9F6D2C','웜톤');
-insert into lipstick(hex_code,color_id) values ('#B87D44','웜톤');
-insert into lipstick(hex_code,color_id) values ('#C9A061','웜톤');
-insert into lipstick(hex_code,color_id) values ('#7C4622','웜톤');
-insert into lipstick(hex_code,color_id) values ('#8E5322','웜톤');
-insert into lipstick(hex_code,color_id) values ('#A1592F','웜톤');
-insert into lipstick(hex_code,color_id) values ('#C87D3A','웜톤');
-insert into lipstick(hex_code,color_id) values ('#B25C28','웜톤');
-insert into lipstick(hex_code,color_id) values ('#9E572E','웜톤');
-insert into lipstick(hex_code,color_id) values ('#D0813D','웜톤');
-insert into lipstick(hex_code,color_id) values ('#BE7A39','웜톤');
-insert into lipstick(hex_code,color_id) values ('#C25A27','웜톤');
-insert into lipstick(hex_code,color_id) values ('#9B4F25','웜톤');
-insert into lipstick(hex_code,color_id) values ('#8C5721','웜톤');
-insert into lipstick(hex_code,color_id) values ('#6A3F20','웜톤');
-insert into lipstick(hex_code,color_id) values ('#AB5F3C','웜톤');
-insert into lipstick(hex_code,color_id) values ('#D47F48','웜톤');
-insert into lipstick(hex_code,color_id) values ('#6E3729','웜톤');
-insert into lipstick(hex_code,color_id) values ('#7A4C34','웜톤');
-insert into lipstick(hex_code,color_id) values ('#8E5232','웜톤');
-insert into lipstick(hex_code,color_id) values ('#A05230','웜톤');
-insert into lipstick(hex_code,color_id) values ('#9E5E33','웜톤');
-insert into lipstick(hex_code,color_id) values ('#C06334','웜톤');
-insert into lipstick(hex_code,color_id) values ('#9B6332','웜톤');
-insert into lipstick(hex_code,color_id) values ('#D0774A','웜톤');
-insert into lipstick(hex_code,color_id) values ('#AF5B39','웜톤');
-insert into lipstick(hex_code,color_id) values ('#7D3A29','웜톤');
-insert into lipstick(hex_code,color_id) values ('#9E582B','웜톤');
-insert into lipstick(hex_code,color_id) values ('#CA6B2F','웜톤');
-insert into lipstick(hex_code,color_id) values ('#7F4A2C','웜톤');
-insert into lipstick(hex_code,color_id) values ('#B5512B','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F8D7A7','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F8B651','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F4C08A','웜톤');
-insert into lipstick(hex_code,color_id) values ('#FFAB55','웜톤');
-insert into lipstick(hex_code,color_id) values ('#FFB557','웜톤');
-insert into lipstick(hex_code,color_id) values ('#FFA76E','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F7A441','웜톤');
-insert into lipstick(hex_code,color_id) values ('#FFD382','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F6B29D','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F8D1A2','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F7C8A3','웜톤');
-insert into lipstick(hex_code,color_id) values ('#FFDF99','웜톤');
-insert into lipstick(hex_code,color_id) values ('#FDBF77','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F8E1A1','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F5C96F','웜톤');
-insert into lipstick(hex_code,color_id) values ('#FFD57F','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F9C77B','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F6B61F','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F7C73A','웜톤');
-insert into lipstick(hex_code,color_id) values ('#FFBB33','웜톤');
-insert into lipstick(hex_code,color_id) values ('#FFAA55','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F8A46B','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F9BC9F','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F7C4A9','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F0C34C','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F4C839','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F8AC4E','웜톤');
-insert into lipstick(hex_code,color_id) values ('#FFDA7A','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F6B16C','웜톤');
-insert into lipstick(hex_code,color_id) values ('#FFCC99','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F9A82F','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F2B01D','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F6C16D','웜톤');
-insert into lipstick(hex_code,color_id) values ('#F9D670','웜톤');
-insert into lipstick(hex_code,color_id) values ('#FFDB76','웜톤');
-insert into lipstick(hex_code,color_id) values ('#A4B8D4','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#91A2C2','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#6C89B0','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#5E7C9D','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#4D6485','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#3C4A73','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#3B5B91','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#2F4E80','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#58738E','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#2B4663','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#698D9F','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#5B7286','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#A6BCC4','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#1E2F52','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#617393','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#4A688A','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#345B73','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#467BA4','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#8B94A6','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#517B95','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#385F7D','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#4C7C8C','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#758F9D','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#395274','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#436387','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#2A4D67','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#708C9C','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#3B5C7B','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#3D5778','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#5B7086','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#1E415F','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#001F3D','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#003B5C','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#004F8C','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#1F4068','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#3A4C7D','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#3E92CC','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#5C6C8C','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#2D385D','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#566D7C','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#46649D','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#7A9BAE','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#A4B0C7','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#B9D1E0','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#A3C1E0','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#B3C9D9','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#C1D7E7','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#98AFC7','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#A2B5D4','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#4F6D7A','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#3A506B','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#294B66','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#1A3B5D','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#557F8B','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#0F3959','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#395F7B','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#1C2E4B','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#3F7082','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#2B4851','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#3D4A61','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#576E8D','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#5B707D','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#1D3D6D','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#466C8F','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#3C6C8B','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#20467B','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#1B3A69','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#3A557F','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#2C2E54','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#B8C4D4','쿨톤');
-insert into lipstick(hex_code,color_id) values ('#A3D1DC','쿨톤');
+INSERT INTO lipstick (hex_code, color_id) VALUES
+-- 웜톤 중 명도/채도가 높은 **springWarm (봄 웜)**: 밝은 코랄, 피치 계열
+('#F8D7A7', 'springWarm'),
+('#F8B651', 'springWarm'),
+('#F4C08A', 'springWarm'),
+('#FFAB55', 'springWarm'),
+('#FFB557', 'springWarm'),
+('#FFA76E', 'springWarm'),
+('#F7A441', 'springWarm'),
+('#FFD382', 'springWarm'),
+('#F6B29D', 'springWarm'),
+('#F8D1A2', 'springWarm'),
+('#F7C8A3', 'springWarm'),
+('#FFDF99', 'springWarm'),
+('#FDBF77', 'springWarm'),
+('#F8E1A1', 'springWarm'),
+('#F5C96F', 'springWarm'),
+('#FFD57F', 'springWarm'),
+('#F9C77B', 'springWarm'),
+('#F6B61F', 'springWarm'),
+('#F7C73A', 'springWarm'),
+('#FFBB33', 'springWarm'),
+('#FFAA55', 'springWarm'),
+('#F8A46B', 'springWarm'),
+('#F9BC9F', 'springWarm'),
+('#F7C4A9', 'springWarm'),
+('#F0C34C', 'springWarm'),
+('#F4C839', 'springWarm'),
+('#F8AC4E', 'springWarm'),
+('#FFDA7A', 'springWarm'),
+('#F6B16C', 'springWarm'),
+('#FFCC99', 'springWarm'),
+('#F9A82F', 'springWarm'),
+('#F2B01D', 'springWarm'),
+('#F6C16D', 'springWarm'),
+('#F9D670', 'springWarm'),
+('#FFDB76', 'springWarm'),
+
+-- 웜톤 중 명도/채도가 낮은 **fallWarm (가을 웜)**: 깊은 브라운, 벽돌색 계열
+('#A45A2B', 'fallWarm'),
+('#9F6D2C', 'fallWarm'),
+('#B87D44', 'fallWarm'),
+('#C9A061', 'fallWarm'),
+('#7C4622', 'fallWarm'),
+('#8E5322', 'fallWarm'),
+('#A1592F', 'fallWarm'),
+('#C87D3A', 'fallWarm'),
+('#B25C28', 'fallWarm'),
+('#9E572E', 'fallWarm'),
+('#D0813D', 'fallWarm'),
+('#BE7A39', 'fallWarm'),
+('#C25A27', 'fallWarm'),
+('#9B4F25', 'fallWarm'),
+('#8C5721', 'fallWarm'),
+('#6A3F20', 'fallWarm'),
+('#AB5F3C', 'fallWarm'),
+('#D47F48', 'fallWarm'),
+('#6E3729', 'fallWarm'),
+('#7A4C34', 'fallWarm'),
+('#8E5232', 'fallWarm'),
+('#A05230', 'fallWarm'),
+('#9E5E33', 'fallWarm'),
+('#C06334', 'fallWarm'),
+('#9B6332', 'fallWarm'),
+('#D0774A', 'fallWarm'),
+('#AF5B39', 'fallWarm'),
+('#7D3A29', 'fallWarm'),
+('#9E582B', 'fallWarm'),
+('#CA6B2F', 'fallWarm'),
+('#7F4A2C', 'fallWarm'),
+('#B5512B', 'fallWarm'),
+
+-- 쿨톤 중 명도/채도가 낮은 **summerCool (여름 쿨)**: 부드러운 파스텔, 뮤트 계열
+('#A4B8D4', 'summerCool'),
+('#91A2C2', 'summerCool'),
+('#A6BCC4', 'summerCool'),
+('#8B94A6', 'summerCool'),
+('#758F9D', 'summerCool'),
+('#708C9C', 'summerCool'),
+('#5B7086', 'summerCool'),
+('#7A9BAE', 'summerCool'),
+('#A4B0C7', 'summerCool'),
+('#B9D1E0', 'summerCool'),
+('#A3C1E0', 'summerCool'),
+('#B3C9D9', 'summerCool'),
+('#C1D7E7', 'summerCool'),
+('#98AFC7', 'summerCool'),
+('#A2B5D4', 'summerCool'),
+('#B8C4D4', 'summerCool'),
+('#A3D1DC', 'summerCool'),
+
+-- 쿨톤 중 명도/채도가 높은 **winterCool (겨울 쿨)**: 딥 네이비, 선명한 블루 계열
+('#6C89B0', 'winterCool'),
+('#5E7C9D', 'winterCool'),
+('#4D6485', 'winterCool'),
+('#3C4A73', 'winterCool'),
+('#3B5B91', 'winterCool'),
+('#2F4E80', 'winterCool'),
+('#58738E', 'winterCool'),
+('#2B4663', 'winterCool'),
+('#698D9F', 'winterCool'),
+('#5B7286', 'winterCool'),
+('#1E2F52', 'winterCool'),
+('#617393', 'winterCool'),
+('#4A688A', 'winterCool'),
+('#345B73', 'winterCool'),
+('#467BA4', 'winterCool'),
+('#517B95', 'winterCool'),
+('#385F7D', 'winterCool'),
+('#4C7C8C', 'winterCool'),
+('#395274', 'winterCool'),
+('#436387', 'winterCool'),
+('#2A4D67', 'winterCool'),
+('#3B5C7B', 'winterCool'),
+('#3D5778', 'winterCool'),
+('#1E415F', 'winterCool'),
+('#001F3D', 'winterCool'),
+('#003B5C', 'winterCool'),
+('#004F8C', 'winterCool'),
+('#1F4068', 'winterCool'),
+('#3A4C7D', 'winterCool'),
+('#3E92CC', 'winterCool'),
+('#5C6C8C', 'winterCool'),
+('#2D385D', 'winterCool'),
+('#566D7C', 'winterCool'),
+('#46649D', 'winterCool'),
+('#4F6D7A', 'winterCool'),
+('#3A506B', 'winterCool'),
+('#294B66', 'winterCool'),
+('#1A3B5D', 'winterCool'),
+('#557F8B', 'winterCool'),
+('#0F3959', 'winterCool'),
+('#395F7B', 'winterCool'),
+('#1C2E4B', 'winterCool'),
+('#3F7082', 'winterCool'),
+('#2B4851', 'winterCool'),
+('#3D4A61', 'winterCool'),
+('#576E8D', 'winterCool'),
+('#5B707D', 'winterCool'),
+('#1D3D6D', 'winterCool'),
+('#466C8F', 'winterCool'),
+('#3C6C8B', 'winterCool'),
+('#20467B', 'winterCool'),
+('#1B3A69', 'winterCool'),
+('#3A557F', 'winterCool'),
+('#2C2E54', 'winterCool');

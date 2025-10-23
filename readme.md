@@ -51,49 +51,88 @@
 ---
 
 
+
 ## 💾 데이터베이스 구조
 
-### User 테이블 (사용자 정보)
+### 📌 테이블 목록
 
-| 필드명   | 데이터 타입  | 설명                 | 제약조건                   |
-| -------- | ------------ | -------------------- | -------------------------- |
-| user_id  | VARCHAR(255) | 사용자 고유 식별자   | PRIMARY KEY                |
-| pw       | TEXT         | 사용자 비밀번호      | NOT NULL                   |
-| name     | TEXT         | 사용자 이름          | NOT NULL                   |
-| year     | int         | 태어난 연도             | -                          |
-| gender   | TEXT         | 성별                 | Male, Female만 입력 가능     |
-| hex_code | VARCHAR(7)   | 립스틱 색상      | FOREIGN KEY lipstick.hex_code               |
+| 테이블명 | 설명 |
+|----------|------|
+| `User` | 사용자 계정 및 프로필 정보 |
+| `Color` | 퍼스널 컬러 유형 정보 |
+| `Chat` | 사용자 채팅 내역 |
+| `lipstick` | 립스틱 색상 정보 |
+| `version` | 애플리케이션 버전 정보 |
 
-### Color 테이블 (퍼스널 컬러 정보)
+### 📊 테이블 상세 구조
 
-| 필드명      | 데이터 타입  | 설명             | 제약조건    |
-| ----------- | ------------ | ---------------- | ----------- |
-| color_id    | VARCHAR(255) | 퍼스널 컬러 이름 | PRIMARY KEY |
-| description | TEXT         | 퍼스널 컬러 설명 | -           |
+#### 1. User 테이블
 
-### Chat 테이블 (채팅 정보)
+| 컬럼명 | 타입 | NULL | 기본값 | 설명 |
+|--------|------|------|--------|------|
+| user_id | TEXT | NOT NULL | - | 사용자 고유 ID (PK) |
+| pw | TEXT | NOT NULL | - | 비밀번호 (암호화 저장) |
+| name | TEXT | NOT NULL | - | 사용자 이름 |
+| email | TEXT | NULL | - | 이메일 |
+| gender | TEXT | NULL | - | 성별 (Male/Female) |
+| hex_code | TEXT | NULL | - | 립스틱 색상 코드 (FK) |
 
-| 필드명  | 데이터 타입  | 설명               | 제약조건                  |
-| ------- | ------------ | ------------------ | ------------------------- |
-| chat_id | int          | 채팅 고유 식별자   | PRIMARY KEY,SERIAL        |
-| user_id | VARCHAR(255) | 사용자 고유 식별자 | FOREIGN KEY User.user_id  |
-| msg     | TEXT         | 채팅 내용          | NOT NULL                  |
-| time    | TIMESTAMP    | 채팅이 올라온 날짜 | DEFAULT CURRENT_TIMESTAMP |
+#### 2. Color 테이블
 
-### lipstick 테이블 (립스틱 색상 정보)
+| 컬럼명 | 타입 | NULL | 기본값 | 설명 |
+|--------|------|------|--------|------|
+| color_id | TEXT | NOT NULL | - | 컬러 ID (PK) |
+| description | TEXT | NULL | - | 컬러 설명 |
 
-| 필드명   | 데이터 타입  | 설명             | 제약조건                   |
-| -------- | ------------ | ---------------- | -------------------------- |
-| hex_code | VARCHAR(7)   | 립스틱 색상      | PRIMARY KEY                |
-| color_id | VARCHAR(255) | 퍼스널 컬러 이름 | FOREIGN KEY color.color_id |
+#### 3. Chat 테이블
 
-### version 테이블 (버전 정보)
+| 컬럼명 | 타입 | NULL | 기본값 | 설명 |
+|--------|------|------|--------|------|
+| chat_id | SERIAL | NOT NULL | - | 채팅 고유 ID (PK) |
+| user_id | TEXT | NOT NULL | - | 사용자 ID (FK) |
+| msg | TEXT | NOT NULL | - | 메시지 내용 |
+| time | TIMESTAMP | NOT NULL | CURRENT_TIMESTAMP | 작성 시간 |
 
-| 필드명   | 데이터 타입  | 설명             | 제약조건                   |
-| -------- | ------------ | ---------------- | -------------------------- |
-| platform | VARCHAR(7)   | 플랫폼      | PRIMARY KEY                |
-| version | VARCHAR(255) | 버전 | NOT NULL |
-| link | VARCHAR(255) | 링크 | NOT NULL |
+#### 4. lipstick 테이블
+
+| 컬럼명 | 타입 | NULL | 기본값 | 설명 |
+|--------|------|------|--------|------|
+| hex_code | TEXT | NOT NULL | - | 색상 코드 (PK) |
+| color_id | TEXT | NOT NULL | - | 연관된 컬러 ID (FK) |
+
+#### 5. version 테이블
+
+| 컬럼명 | 타입 | NULL | 기본값 | 설명 |
+|--------|------|------|--------|------|
+| version | TEXT | NOT NULL | - | 버전 정보 |
+
+### 🔗 테이블 관계
+
+- **User** → **lipstick**: `User.hex_code`는 `lipstick.hex_code`를 참조
+- **lipstick** → **Color**: `lipstick.color_id`는 `Color.color_id`를 참조
+- **Chat** → **User**: `Chat.user_id`는 `User.user_id`를 참조
+
+### 📝 데이터베이스 설계 설명
+
+1. **User 테이블**
+   - 사용자 계정 정보와 기본 프로필을 관리
+   - `hex_code`를 통해 추천 립스틱 색상과 연결
+
+2. **Color 테이블**
+   - 퍼스널 컬러 유형(봄웜톤, 여름쿨톤 등) 정보 저장
+   - 각 컬러에 대한 상세 설명 포함
+
+3. **Chat 테이블**
+   - 사용자 간 채팅 내역 저장
+   - 작성 시간을 기준으로 자동 정렬 가능
+
+4. **lipstick 테이블**
+   - 다양한 립스틱 색상 정보 저장
+   - 퍼스널 컬러 유형과 연결되어 추천 시스템에 활용
+
+5. **version 테이블**
+   - 클라이언트 앱 버전 관리
+   - 플랫폼별 최신 버전 정보 제공
 
 ---
 
@@ -117,4 +156,3 @@
 ## 🛠 사용 기술
 
 - ![Postgresql](https://img.shields.io/badge/-postgresql-4169E1?style=flat&logo=postgresql&logoColor=white)
-- ![amazonrds](https://img.shields.io/badge/-amazonrds-527FFF?style=flat&logo=amazonrds&logoColor=white)
