@@ -70,11 +70,9 @@
 
 | 컬럼명 | 타입 | NULL | 기본값 | 설명 |
 |--------|------|------|--------|------|
-| user_id | TEXT | NOT NULL | - | 사용자 고유 ID (PK) |
+| email | TEXT | NOT NULL | - | 이메일 (PK) |
 | pw | TEXT | NOT NULL | - | 비밀번호 (암호화 저장) |
 | name | TEXT | NOT NULL | - | 사용자 이름 |
-| email | TEXT | NULL | - | 이메일 |
-| gender | TEXT | NULL | - | 성별 (Male/Female) |
 | hex_code | TEXT | NULL | - | 립스틱 색상 코드 (FK) |
 
 #### 2. Color 테이블
@@ -89,7 +87,7 @@
 | 컬럼명 | 타입 | NULL | 기본값 | 설명 |
 |--------|------|------|--------|------|
 | chat_id | SERIAL | NOT NULL | - | 채팅 고유 ID (PK) |
-| user_id | TEXT | NOT NULL | - | 사용자 ID (FK) |
+| email | TEXT | NOT NULL | - | 사용자 ID (FK) |
 | msg | TEXT | NOT NULL | - | 메시지 내용 |
 | time | TIMESTAMP | NOT NULL | CURRENT_TIMESTAMP | 작성 시간 |
 
@@ -110,7 +108,7 @@
 
 - **User** → **lipstick**: `User.hex_code`는 `lipstick.hex_code`를 참조
 - **lipstick** → **Color**: `lipstick.color_id`는 `Color.color_id`를 참조
-- **Chat** → **User**: `Chat.user_id`는 `User.user_id`를 참조
+- **Chat** → **User**: `Chat.email`는 `User.email`를 참조
 
 ### 📝 데이터베이스 설계 설명
 
@@ -140,7 +138,7 @@
 
 - **User 테이블**: 사용자의 기본 정보와 퍼스널 컬러 분석 결과를 저장합니다. `color_id` 필드를 통해 Color 테이블과 연결되어 있어, 사용자의 퍼스널 컬러 정보를 참조할 수 있습니다.
 - **Color 테이블**: 시스템에서 사용되는 퍼스널 컬러 타입들의 정보를 저장합니다. 봄 웜톤, 여름 쿨톤, 가을 웜톤, 겨울 쿨톤의 4가지 기본 타입을 저장합니다.
-- **Chat 테이블**: 채팅 내역을 정리합니다 `user_id`필드를 통해 user랑랑 연동이 되어있습니다 user 테이블의 `color_id` 필드를 통해 Color 테이블과 연결할수 있습니다
+- **Chat 테이블**: 채팅 내역을 정리합니다 `email`필드를 통해 user랑랑 연동이 되어있습니다 user 테이블의 `color_id` 필드를 통해 Color 테이블과 연결할수 있습니다
 - **lipstick 테이블**: 해당 립스틱 색상에 어울리는 퍼스널 컬러를 저장합니다. `color_id` 필드를 통해 Color 테이블과 연결되어 있어, 사용자의 퍼스널 컬러 정보를 참조할 수 있습니다.
 - **version 테이블**: 해당 플랫폼의 버전과 링크를 저장합니다.
 
