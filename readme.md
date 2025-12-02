@@ -44,65 +44,61 @@
 
 ### 6. [WarmCoolVim](https://github.com/An0jin/WarmCoolVim)
 
-- vim으로 작성한 쉘 스크립트
-- 쉘 스크립트를 활용한 도커 조작
-- 쉘 스크립트를 활용한 웹호스팅
+- vim으로 작성한 docker compose
 
 ---
-
-
 
 ## 💾 데이터베이스 구조
 
 ### 📌 테이블 목록
 
-| 테이블명 | 설명 |
-|----------|------|
-| `User` | 사용자 계정 및 프로필 정보 |
-| `Color` | 퍼스널 컬러 유형 정보 |
-| `Chat` | 사용자 채팅 내역 |
-| `lipstick` | 립스틱 색상 정보 |
-| `version` | 애플리케이션 버전 정보 |
+| 테이블명     | 설명                       |
+| ------------ | -------------------------- |
+| `User`     | 사용자 계정 및 프로필 정보 |
+| `Color`    | 퍼스널 컬러 유형 정보      |
+| `Chat`     | 사용자 채팅 내역           |
+| `lipstick` | 립스틱 색상 정보           |
+| `version`  | 애플리케이션 버전 정보     |
 
 ### 📊 테이블 상세 구조
 
 #### 1. User 테이블
 
-| 컬럼명 | 타입 | NULL | 기본값 | 설명 |
-|--------|------|------|--------|------|
-| email | TEXT | NOT NULL | - | 이메일 (PK) |
-| pw | TEXT | NOT NULL | - | 비밀번호 (암호화 저장) |
-| name | TEXT | NOT NULL | - | 사용자 이름 |
-| hex_code | TEXT | NULL | - | 립스틱 색상 코드 (FK) |
+| 컬럼명   | 타입 | NULL     | 기본값 | 설명                   |
+| -------- | ---- | -------- | ------ | ---------------------- |
+| email    | TEXT | NOT NULL | -      | 이메일 (PK)            |
+| pw       | TEXT | NOT NULL | -      | 비밀번호 (암호화 저장) |
+| name     | TEXT | NOT NULL | -      | 사용자 이름            |
+| hex_code | TEXT | NULL     | -      | 립스틱 색상 코드 (FK)  |
 
 #### 2. Color 테이블
 
-| 컬럼명 | 타입 | NULL | 기본값 | 설명 |
-|--------|------|------|--------|------|
-| color_id | TEXT | NOT NULL | - | 컬러 ID (PK) |
-| description | TEXT | NULL | - | 컬러 설명 |
+| 컬럼명      | 타입 | NULL     | 기본값 | 설명         |
+| ----------- | ---- | -------- | ------ | ------------ |
+| color_id    | TEXT | NOT NULL | -      | 컬러 ID (PK) |
+| description | TEXT | NULL     | -      | 컬러 설명    |
 
 #### 3. Chat 테이블
 
-| 컬럼명 | 타입 | NULL | 기본값 | 설명 |
-|--------|------|------|--------|------|
-| chat_id | SERIAL | NOT NULL | - | 채팅 고유 ID (PK) |
-| email | TEXT | NOT NULL | - | 사용자 ID (FK) |
-| msg | TEXT | NOT NULL | - | 메시지 내용 |
-| time | TIMESTAMP | NOT NULL | CURRENT_TIMESTAMP | 작성 시간 |
+| 컬럼명  | 타입      | NULL     | 기본값            | 설명              |
+| ------- | --------- | -------- | ----------------- | ----------------- |
+| chat_id | SERIAL    | NOT NULL | -                 | 채팅 고유 ID (PK) |
+| email   | TEXT      | NOT NULL | -                 | 사용자 ID (FK)    |
+| msg     | TEXT      | NOT NULL | -                 | 메시지 내용       |
+| time    | TIMESTAMP | NOT NULL | CURRENT_TIMESTAMP | 작성 시간         |
 
 #### 4. lipstick 테이블
 
-| 컬럼명 | 타입 | NULL | 기본값 | 설명 |
-|--------|------|------|--------|------|
-| hex_code | TEXT | NOT NULL | - | 색상 코드 (PK) |
-| color_id | TEXT | NOT NULL | - | 연관된 컬러 ID (FK) |
+| 컬럼명   | 타입 | NULL     | 기본값 | 설명                |
+| -------- | ---- | -------- | ------ | ------------------- |
+| hex_code | TEXT | NOT NULL | -      | 색상 코드 (PK)      |
+| color_id | TEXT | NOT NULL | -      | 연관된 컬러 ID (FK) |
 
 #### 5. version 테이블
 
-| 컬럼명 | 타입 | NULL | 기본값 | 설명 |
-|--------|------|------|--------|------|
-| version | TEXT | NOT NULL | - | 버전 정보 |
+| 컬럼명  | 타입 | NULL     | 기본값 | 설명      |
+| ------- | ---- | -------- | ------ | --------- |
+| version | TEXT | NOT NULL | -      | 버전 정보 |
 
 ### 🔗 테이블 관계
 
@@ -113,22 +109,23 @@
 ### 📝 데이터베이스 설계 설명
 
 1. **User 테이블**
+
    - 사용자 계정 정보와 기본 프로필을 관리
    - `hex_code`를 통해 추천 립스틱 색상과 연결
-
 2. **Color 테이블**
+
    - 퍼스널 컬러 유형(봄웜톤, 여름쿨톤 등) 정보 저장
    - 각 컬러에 대한 상세 설명 포함
-
 3. **Chat 테이블**
+
    - 사용자 간 채팅 내역 저장
    - 작성 시간을 기준으로 자동 정렬 가능
-
 4. **lipstick 테이블**
+
    - 다양한 립스틱 색상 정보 저장
    - 퍼스널 컬러 유형과 연결되어 추천 시스템에 활용
-
 5. **version 테이블**
+
    - 클라이언트 앱 버전 관리
    - 플랫폼별 최신 버전 정보 제공
 
