@@ -86,6 +86,7 @@
 | email   | TEXT      | NOT NULL | -                 | 사용자 ID (FK)    |
 | msg     | TEXT      | NOT NULL | -                 | 메시지 내용       |
 | time    | TIMESTAMP | NOT NULL | CURRENT_TIMESTAMP | 작성 시간         |
+| color_id | TEXT      | NOT NULL | -                 | 채팅 시점의 퍼스널 컬러 결과 (FK) |
 
 #### 4. lipstick 테이블
 
@@ -107,7 +108,7 @@
 - **Chat** → **User**: `Chat.email`는 `User.email`를 참조
 
 ### 📝 데이터베이스 설계 설명
-
+#### 테이블
 1. **User 테이블**
 
    - 사용자 계정 정보와 기본 프로필을 관리
@@ -128,6 +129,11 @@
 
    - 클라이언트 앱 버전 관리
    - 플랫폼별 최신 버전 정보 제공
+#### 뷰
+1. **v_user_lipstick**
+   - 사용자 정보와 추천 립스틱 색상 정보를 연결하여 사용자의 퍼스널컬러를 볼 수 있다
+2. **v_user_chat_lipstick**
+   - 사용자 정보와 채팅 내역을 연결 채팅과 유저정보를 볼수있다
 
 ---
 
