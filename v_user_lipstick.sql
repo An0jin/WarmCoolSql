@@ -1,8 +1,9 @@
-CREATE OR REPLACE VIEW v_user_chat_lipstick
-AS SELECT chat_id,
-    name,
-    msg,
-    chat.color_id
-   FROM v_user_lipstick
-     JOIN chat ON v_user_lipstick.email = chat.email
-  ORDER BY chat."time";
+CREATE OR REPLACE VIEW v_user_lipstick
+AS SELECT user.email,
+    user.name,
+    user.pw,
+    lipstick.hex_code,
+    lipstick.color_id,
+    lipstick.cname
+   FROM user
+     LEFT JOIN lipstick ON user.hex_code = lipstick.hex_code;
